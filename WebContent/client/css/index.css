@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/*banner开始*/
+.banner{
+    width: 100%;
+    height: 350px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.banner ul{
+    position: relative;
+    width: 1100px;
+}
+.banner ul li {
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 700px;
+    height: 350px;
+}
+.banner ul img{
+    width: 700px;
+    height: 350px;
+}
+.banner .mask{
+    width: 700px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 275px;
+    background-color: rgba(51,51,51,.4);
+    color: #fff;
+    display: none;
+}
+/*banner结束*/
+
+/*主页显示开始*/
+.main h2{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #494949;
+    padding : 10px 0;
+}
+.main .main-content h2{
+    text-indent: 10px;
+}
+.main .like{
+    width: 48px;
+    height: 33px;
+    background-color: #FAE9DA;
+    color: #CA6445;
+    text-align: center;
+    padding: 8px 0;
+}
+.main .email-box{
+    width: 600px;
+}
+.main .email{
+    width: 535px;
+    border-bottom: 1px solid #E5E5E5;
+    padding:0 0 8px 0;
+    font-size: 14px;
+}
+.main .email a{
+    color:#37a;
+}
+.main .email a:hover{
+    color: #fff;
+    background-color: #37a;
+}
+.main .e-content{
+    width: 515px;
+    height: 70px;
+    padding: 10px 10px;
+    margin: 12px 0;
+    background-color: #F9F9F9;
+    color: #999;
+    font-size: 13px;
+    overflow: hidden;
+}
+.e-content .con-l{
+    width: 70px;
+    height: 75px;
+}
+.e-content .con-r{
+    width: 430px;
+    height:74px;
+    overflow:hidden;
+}
+.main .ad{
+    background-color: rgba(252, 252, 253, 0.5);
+    width: 650px;
+    font-size: 14px;
+    line-height: 20px;
+    margin:0 0 30px 0;
+}
+.main .write-box{
+    width: 100%;
+    border-bottom: 1px dashed #ccc;
+}
+.main .main-box{
+    padding: 20px;
+}
+.main .head-r{
+    margin-left: 380px;
+}
+.main .sec-h2{
+    margin-left: 610px;
+}
+.main .write{
+    width: 250px;
+    height: 50px;
+    color: #fff;
+    background-color: #037B82;
+    font-size: 18px;
+    margin: 20px 25px;
+
+}
+.main .details-content{
+    width: 515px;
+    padding: 10px 10px;
+    margin: 12px 0;
+    color: #999;
+    font-size: 13px;
+    overflow: hidden;
+}
+.main .e-from{
+    color: #666;
+    font-size: 12px;
+}
+.main .e-creattime,.e-sendtime,.e-type,.see{
+    font-size: 12px;
+    color: #999;
+    margin: 0 10px;
+}
+.main .attention{
+    width: 300px;
+    margin-bottom: 30px;
+}
+.main .attention h3{
+    font-size: 15px;
+    color: #666;
+}
+.main .attention li{
+    margin: 10px 0 0 15px;
+    list-style: square;
+    color: #333;
+}
+
+
+.main .attention li i,.attention li s{
+    position: relative;
+}
+.main .attention i img{
+    width: 21px;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+.main .attention s img{
+    width: 17px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+.main .attention li a{
+    color: #37a;
+}
+.main .attention li a:hover{
+    color: #fff;
+    background-color: #37a;
+}
+/*主页显示结束*/
+
+
+
+.main .talk{
+    width: 100%;
+    height: 150px;
+}
+.main button{
+    float: right;
+    cursor: pointer;
+    width: 55px;
+    height: 25px;
+    background-color: #D5D5D5;
+    color: #333;
+    margin-bottom: 20px;
+}
+.main .open-box{
+    margin: 10px 0;
+}
+.guesslike{
+    width: 520px;
+    margin-left: 70px;
+}
+.guess-block{
+    width: 91px;
+    height: 130px;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 3px;
+    overflow: hidden;
+    margin: 0 1px 2px 1px;
+}
+.guess-block:hover{
+    border: 1px solid #eee;
+}
+.guess-block a:hover{
+    color: #333;
+}
+.guesslike h6{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #333;
+    font-weight: 600;
+    margin-left: -70px;
+}
+.guesslike img{
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    margin: 8px 5px;
+}
+.main-details{
+    background-color: rgba(243, 243, 244, 0.5);
+    padding: 10px 50px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 10px auto;
+}
+.main-content ol{
+    margin-left: 15%;
+    position: relative;
+}
+.main-content ol li{
+    float: left;
+    padding: 7px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    height: 15px;
+}
+.main-content ol .this-page a{
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    background-color: #3377aa;
+    color: #fff;
+    cursor: text;
+
+}
+
+.main-content ol li a:hover{
+    background-color: #3377aa;
+    color: #fff;
+}

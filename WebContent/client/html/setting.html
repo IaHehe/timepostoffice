@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <link rel="stylesheet" href="css/base.css">    <!--页面公共部分css-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/email.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!--头部导航开始-->
+<div class="mask"></div>
+<div class="shortcut clearfix">
+    <div class="w">
+        <div class="fl to">给未来的自己写一封信吧</div>
+        <div class="fr">
+            <ul class="fir-ul">
+                <li><a href="javascript:;" id="user">ws </a>，欢迎你</li>
+                <ul class="user-ul">
+                    <li><a href="setting.html">设置</a></li>
+                    <li><a href="myemail.html">退出</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--登录注册-->
+
+<div class="nav clearfix">
+    <div class="w">
+        <h1>
+            时光邮局
+            <!--<img src="img/1.png" alt="">-->
+        </h1>
+        <ul>
+            <li><a href="index.html">首页</a><s>▲</s></li>
+            <li><a href="email.html">写一封信</a><s>▲</s></li>
+            <li><a href="papermail.html">纸信</a><s>▲</s></li>
+            <li><a href="#">信箱开启</a><s>▲</s></li>
+            <li><a href="myemail.html">我的信箱</a><s>▲</s></li>
+            <li><a href="#">帮助文档</a><s>▲</s></li>
+            <li><a href="#">加入我们</a><s>▲</s></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="标题、作者">
+            <a href="#"><span></span></a>
+        </div>
+    </div>
+</div>
+<!--头部导航结束-->
+
+
+<!--设置开始-->
+<div class="main">
+    <div class="w">
+        <div class="setting">
+            <form>
+                <label></label><img class="headpic"></img>
+                <input type="file" id="headFile" style="display: none" accept="image/*">
+                <input type="button" class="headchange" value="选择图片"><br>
+                <div class="msg"></div>
+                <label>昵称</label><input type="text" value="ws" required><br>
+                <label>邮箱</label><input type="email" disabled value="392842@qq.com" required><br>
+                <label>原密码</label><input type="password" required><br>
+                <label>新密码</label><input type="password" required><br>
+                <input type="submit" value="保存" class="set-btn">
+            </form>
+        </div>
+    </div>
+</div>
+<!--设置结束-->
+
+
+<!--footer-->
+<div class="footer">
+</div>
+
+</body>
+</html>
+<script>
+    $(".headchange").click(function () {
+        $("#headFile").click();
+    })
+    $("#headFile").change(function () {
+        var file=this.files[0]?this.files[0]:null;
+        if(!file){
+            return false;
+        }
+        var file_reader=new FileReader();
+        file_reader.onload=function(){
+            var img_url=this.result;
+            $(".headpic").attr("src",img_url);
+        }
+        file_reader.readAsDataURL(file);
+    })
+    $(".set-btn").click(function () {
+        AjaxFileUpload();
+    })
+
+    function AjaxFileUpload() {
+        $.ajaxFileUpload(
+                {
+                    url: "/System/headFileUpload",//用于上传文件方法的地址
+                    secureuri: false,
+                    fileElementId: "headFile",//上传控件的Name值
+                    dataType: "Json",//返回数据类型
+                    success: function (data, status)//服务器响应成功处理函数
+                    {
+                        //判断是否处理成功
+                        if (typeof (data.error) != 'undefined') {
+                            $(".msg").show();
+                            $(".msg").append("上传失败");
+                            return;
+                        }
+                        else {
+                            $(".msg").show();
+                            $(".msg").append("上传成功");
+                            return;
+                        }
+                    }
+                })
+    }
+</script>

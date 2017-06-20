@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;  }
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none; /*去掉input 获取焦点后的外框环绕*/
+}
+ul, ol {
+    list-style: none;  }
+
+/*去掉原样式中的小黑点*/
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";  }
+select, input {
+    vertical-align: middle;  }
+/*输入字居中显示*/
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;  }
+/**/
+textarea {
+    resize: none; /*去掉右下角*/
+}
+
+/*防止拖动*/
+img {
+    border: 0;
+    vertical-align: middle; /*  去掉图片底部默认的3像素空白缝隙*/  }
+table {
+    border-collapse: collapse; /*合并外连线*/  }
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写法*/
+    color: #666; /*150%基于当前字体尺寸的百分比行间距*/
+    background: #fff;  }
+
+.clearfix:before, .clearfix:after {
+    /*清除浮动，最好最标准的写法*/
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    visibility: hidden;/*保留位置*/  }
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/  /*兼容IE6下的写法*/  }
+
+a {
+    color: #37a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+a:visited{
+    color: #669;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;/*将原有的样式去掉*/
+    text-decoration: none;/*去掉下划线，但也可以去掉中划线(贯穿线)*/
+}
+
+.col-blue {
+    color: #37a !important;/*页面主色调*/
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+/*css初始化完成*/
+
+body{
+    background-color: rgba(253, 253, 254, 0.5);
+}
+
+/*头部导航开始*/
+.shortcut{
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    color: #D5D5D5;
+    border-top: 1px solid #AAAAAB;
+    background-color: #545652;
+}
+.shortcut .to{
+    letter-spacing: 1px;
+}
+.shortcut ul li{
+    float: left;
+    padding: 0 15px;
+}
+.shortcut ul li a{
+    color: #D5D5D5;
+}
+.shortcut ul li a:hover{
+    color: #fff;
+}
+.topbanner{
+    text-align: center;
+    padding: 5px 0;
+    /*display: none;*/
+}
+.nav{
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    background-color: #F0F6F3;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.nav h1{
+    display: block;
+    float: left;
+    color: #0E959D;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: "Helvetica";
+    margin-right: 40px;
+}
+.nav ul li{
+    float: left;
+    padding: 0 12px;
+    font-size: 14px;
+    position: relative;
+}
+.nav ul li a{
+    color: #037B82;
+}
+.nav ul li a:hover{
+    color: #fff;
+    background-color: #037b82;
+}
+.nav li s{
+    position: absolute;
+    left: 30%;
+    top: 31px;
+    color: #fff;
+    font-size: 22px;
+    display: none;
+}
+.nav li .current{
+    display: block;
+}
+.nav input{
+    width: 278px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #E1E9E1;
+    font-size: 13px;
+    text-indent: 10px;
+    border-radius: 25px;
+}
+.nav .search{
+    position: relative;
+    float: right;
+}
+.nav span{
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    background: url(../img/search.png) no-repeat center;
+    text-align: center;
+    top:24px;
+    right: 0px;
+}
+/*头部导航结束*/
+
+/*登录注册*/
+
+.shortcut .fir-ul{
+    position: relative;
+}
+.shortcut .user-ul{
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    width: 80px;
+    top: 28px;
+    left: -10px;
+    z-index: 10;
+    display: none;
+}
+.shortcut .user-ul li{
+    float: left;
+    padding: 5px;
+    text-indent: 5px;
+    width: 80px;
+}
+.login,.vlidate,.register-success{
+    width: 500px;
+    margin:50px auto;
+    background-color: #F0F6F3;
+    border-radius: 10px;
+    padding-top: 60px;
+    text-align: center;
+}
+.vlidate,.register-success {
+	height: 250px;
+}
+.register-success a:hover {
+	backager-color: #037B82;
+}
+.login form,.register form{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    margin: 30px auto;
+    position: relative;
+}
+.login form span img{
+     display: block;
+     width: 23px;
+     height: 23px;
+     position: absolute;
+     left: 22%;
+     top: 5px;
+ }
+.box form input{
+    margin:0 0 10px 0;
+    width: 60%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-indent: 40px;
+    background-color: #fefefe;
+    margin:0 0 20px 0;
+}
+.box form span .pass{
+    top:64px;
+}
+.box form .pass-sec{
+    top:120px;
+}
+form p{
+    padding-left: 170px;
+    font-size:14px;
+    color: #669;
+    margin: 5px;
+}
+form p a{
+    font-size: 15px;
+    color: #037B82;
+}
+form p a:hover{
+    background-color: #037B82;
+    color: #fff;
+}
+.email-a:hover{
+    background-color: #037B82;
+}
+.box .login-btn,.box .register-btn{
+    width: 60%;
+    height: 35px;
+    background-color:#037B82;
+    color: #fff;
+    font-size: 16px;
+    text-indent: 0;
+    cursor: pointer;
+}
+
+/*footer*/
+.footer .footer-content{
+    border-top: 1px dashed #ccc;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+.footer p{
+    text-align: center;
+    display: inline-block;
+    padding: 20px 0 0 60px;
+}
+.footer img{
+    margin: 0 40px;
+}
+.footer strong{
+    font-size: 18px;
+    color: #CA6445;
+}

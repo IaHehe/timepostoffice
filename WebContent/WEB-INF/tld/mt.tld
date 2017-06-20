@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<!-- 自定义标签的描述 -->
+	<description></description>
+	<display-name>时光邮局标签库</display-name>
+	<tlib-version>1.0</tlib-version>
+	<!-- 自定义标签的前缀 -->
+	<short-name>mt</short-name>
+	<!-- 自定义标签的uri如果你采用的jstl1.2以上的版本 -->
+	<uri></uri>
+
+
+	<tag>
+		<description>日期格式化标签</description>
+		<display-name>toDateString</display-name>
+		<name>toDateString</name>
+		<tag-class>com.cqust.tpo.utils.DateFormatTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>date</name>
+			<required>true</required>		
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.util.Date</type>
+		</attribute>
+		
+		<attribute>
+			<name>format</name>
+			<required>false</required>		
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+	<!-- 函数标签 -->
+	
+	<!-- 
+	<function>
+		标签的描述
+		<description>将日期类型转化为默认格式</description>
+		标签名称 :命名规则：简单易懂，方便记忆
+		<name>toDateString</name>
+		标签对应的类
+		<function-class>com.cqust.tpo.utils.DateUtil</function-class>
+		类中对应的方法
+		<function-signature>String toDateString(java.util.Date)</function-signature>
+		例子
+		<example>${mt:toDateString(date)}</example>
+	</function>
+
+ 	-->
+ 	
+</taglib>
+	

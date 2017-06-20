@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" metadata-complete="false" version="3.1">
+  <display-name>timepostoffice</display-name>
+
+  <!-- 马腾宇修改内容    S -->
+  	<!-- Quartz框架启动监听器  S -->
+	<context-param>
+		<description>quartz 配置文件位置</description>
+		<param-name>quartz:config-file</param-name>
+		<param-value>my_quartz.properties</param-value>
+	</context-param>
+	<context-param>
+		<description>卸载时关闭与否---关闭</description>
+		<param-name>quartz:shutdown-on-unload</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<description>关闭时是否等待当前任务完成---是</description>
+		<param-name>quartz:wait-on-shutdown</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<description>加载时是否开启quartz框架---是</description>
+		<param-name>quartz:start-on-load</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<listener>
+		<description>quartz监听器类</description>
+		<listener-class>
+			com.cqust.tpo.utils.quartz.SchedulerListener
+		</listener-class>
+	</listener>
+
+	<!-- Quartz框架启动监听器  E -->
+	
+	<!-- 马腾宇修改内容    E -->
+
+
+  <welcome-file-list>
+    <welcome-file>client/index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

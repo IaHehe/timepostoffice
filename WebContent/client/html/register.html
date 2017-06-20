@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+<div class="box">
+    <div class="login">
+        <img src="img/1.png" alt="">
+        <form action="" id="regist-form">
+            <input type="email" placeholder="邮箱" required><br>
+            <span><img src="img/name.png" alt="" class="name"></span>
+            <input type="password" placeholder="密码" required><br>
+            <input type="password" placeholder="确认密码" required><br>
+            <span><img src="img/pass.png" alt="" class="pass"></span>
+            <span><img src="img/pass.png" alt="" class="pass-sec"></span>
+            <input type="submit" value="注册" class="register-btn" id="register">
+            <p>已有账户？去 <a href="login.html">登录</a></p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script>
+    var register=document.getElementById("register");
+    var form=document.getElementById("regist-form");
+    register.onclick= function () {
+        form.innerHTML="感谢您注册 时光邮局 ，<br>请进入您的注册邮箱 <a href='#' class='email-a'>42452344@qq.com</a> 进行验证</br><br><a href='index.html'>返回首页</a>"
+    }
+</script>

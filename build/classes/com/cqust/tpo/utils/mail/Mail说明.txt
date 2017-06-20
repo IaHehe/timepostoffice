@@ -1,0 +1,14 @@
+
+Mail的自定义封装
+
+host("mail.smtp.host"),
+port("mail.smtp.port"),
+auth("mail.smtp.auth"),
+scoketFactoryClass("mail.smtp.socketFactory.class"),
+scoketFactoryClassPort("mail.smtp.socketFactory.port"),
+debug("debug"),
+username("username"),
+password("password")
+
+
+
